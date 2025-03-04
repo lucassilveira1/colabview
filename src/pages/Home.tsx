@@ -28,7 +28,12 @@ export const Home = () => {
                             <td>{employee.id}</td>
                             <td>{employee.name}</td>
                             <td>{employee.job}</td>
-                            <td>{employee.admission_date}</td>
+                            <td>
+                                {new Date(
+                                    employee.admission_date
+                                ).toLocaleDateString()}
+                            </td>
+                            <td>{employee.phone}</td>
                             <td>
                                 <img
                                     src={employee.image}
