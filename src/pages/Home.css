@@ -15,33 +15,129 @@
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.employee-list {
-    width: 100%;
-    flex-direction: column;
-}
-
-.employee-item {
+.employees-list {
+    display: flex;
+    align-items: center;
     background-color: #fff;
     margin: 2px;
 }
+.employees-data {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
 
+.employee-details,
+.employee-header,
 .employee-info {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
 }
 
-.employee-info h3 {
-    flex: 1;
-    margin: 20px;
+.employee-header {
+    gap: 100px;
+    align-items: center;
+    padding: 0 35px;
 }
-.employee-info img {
+
+.employee-info {
+    text-align: left;
+    padding: 0 30px;
+    gap: 110px;
+}
+
+.employees-data h3 {
+    flex: 1;
+    text-align: center;
+}
+
+.employee-details {
+    display: flex;
+    position: relative;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.employees-data img {
     width: 40px;
     height: 40px;
     border-radius: 50%;
-    padding: 0 60px;
+    padding: 0 40px;
 }
 
 .expand-btn {
     display: none;
+}
+
+.info-title {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .container {
+        width: 335px;
+        padding: 0 15px;
+    }
+
+    .content-header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .employees-list {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .employee-header {
+        width: 100%;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .employee-info {
+        display: none;
+        flex-direction: column;
+        gap: 8px;
+        padding-top: 10px;
+    }
+
+    .employee-info.show {
+        display: flex;
+    }
+
+    .info-item {
+        display: flex;
+        position: absolute;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .info-title {
+        display: flex;
+        position: relative;
+        flex-basis: 30%;
+        text-align: left;
+    }
+
+    .info-value {
+        flex-basis: 70%;
+        text-align: right;
+    }
+
+    .expand-btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        padding-top: 10px;
+        filter: invert(1);
+    }
+
+    .expand-btn img {
+        width: 20px;
+        height: 20px;
+    }
 }
