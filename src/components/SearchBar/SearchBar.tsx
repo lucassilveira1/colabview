@@ -18,7 +18,7 @@ export const SearchBar = ({ value, onSearch }: SearchBarProps) => {
                 value={value}
                 onChange={handleChange}
             />
-            <img src={searchIcon} id="searchIcon" />
+            <img src={searchIcon} id="search-icon" />
         </div>
     );
 };
