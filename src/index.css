@@ -89,7 +89,7 @@ input {
     border: 1px solid #dfdfdf;
     border-radius: 8px;
     padding: 12px 16px 12px 16px;
-    width: 200px;
+    width: 100%;
 }
 
 #search-icon {
@@ -110,9 +110,7 @@ input {
     }
     .search-container {
         width: 335px;
-    }
-    .search-container input {
-        width: 100%;
+        margin-bottom: 15px;
     }
 
     .table-header {

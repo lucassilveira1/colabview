@@ -1,7 +1,7 @@
 import { useState } from "react";
 import chevronup from "../../assets/icons/charm_chevron-up.svg";
 import chevrondown from "../../assets/icons/charm_chevron-down.svg";
-
+import formatPhoneNumber from "../../masks/phone";
 import { Employee } from "../../interfaces/employee";
 
 interface EmployeeFilterProps {
@@ -73,7 +73,7 @@ const EmployeeFilter: React.FC<EmployeeFilterProps> = ({
                             <div className="info-item">
                                 <div className="info-title">Telefone:</div>
                                 <div className="info-value">
-                                    <h3>{employee.phone}</h3>
+                                    <h3>{formatPhoneNumber(employee.phone)}</h3>
                                 </div>
                             </div>
                         </div>
