@@ -13,6 +13,13 @@
     display: flex;
     flex-direction: column;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 0;
+    margin: 0;
+}
+
+.employee-container {
+    margin: 0;
+    padding: 0;
 }
 
 .employees-list {
@@ -21,6 +28,7 @@
     background-color: #fff;
     margin: 2px;
 }
+
 .employees-data {
     display: flex;
     align-items: center;
@@ -57,6 +65,7 @@
     flex-wrap: wrap;
     align-items: center;
 }
+
 .employees-data img {
     width: 40px;
     height: 40px;
@@ -72,6 +81,28 @@
     display: none;
 }
 
+.table-header-container {
+    display: block;
+    background-color: #0500ff;
+    color: #ffffff;
+    height: 47px;
+    border-top-right-radius: 8px;
+    border-top-left-radius: 8px;
+    margin: 0;
+}
+
+.table-header {
+    display: flex;
+    height: 100%;
+    align-items: center;
+}
+
+.table-header h2 {
+    flex: 1;
+    text-align: center;
+    margin: 0;
+}
+
 @media (max-width: 768px) {
     .container {
         width: 335px;
@@ -79,8 +110,25 @@
     }
 
     .content-header {
+        display: flex;
         flex-direction: column;
-        align-items: center;
+        align-items: start;
+        width: 335px;
+        padding: 0;
+        margin: auto;
+    }
+
+    .content-header h1 {
+        text-align: left;
+    }
+
+    .table-header {
+        justify-content: flex-start;
+    }
+
+    .table-header h2 {
+        text-align: left;
+        width: 150px;
     }
 
     .employees-list {
@@ -89,19 +137,30 @@
         gap: 10px;
     }
 
+    .employees-data {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
     .employee-header {
         width: 100%;
         display: flex;
         justify-content: flex-start;
         align-items: center;
         gap: 10px;
+        padding: 0 15px;
+    }
+
+    .employees-data img {
+        padding: 0;
     }
 
     .employee-info {
         display: none;
         flex-direction: column;
-        gap: 8px;
-        padding-top: 10px;
+        gap: 10px;
+        width: 100%;
+        margin: 0;
     }
 
     .employee-info.show {
@@ -110,21 +169,38 @@
 
     .info-item {
         display: flex;
-        position: absolute;
+        align-items: center;
         justify-content: space-between;
         width: 100%;
+        position: static;
     }
 
     .info-title {
         display: flex;
-        position: relative;
-        flex-basis: 30%;
+        flex-basis: 40%;
+        font-weight: bold;
         text-align: left;
     }
 
     .info-value {
-        flex-basis: 70%;
+        display: flex;
+        flex-basis: 60%;
         text-align: right;
+        padding-left: 10px;
+    }
+
+    .info-item::after {
+        content: "";
+        flex-grow: 1;
+        height: 1px;
+        background: repeating-linear-gradient(
+            to right,
+            #000 0,
+            #000 5px,
+            transparent 5px,
+            transparent 10px
+        );
+        margin: 0 10px;
     }
 
     .expand-btn {
